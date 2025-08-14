@@ -8,8 +8,33 @@ body {
 header {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     background-color: hsl(0,0%,10%);
     height: 5rem;
     box-shadow: 0 0 2rem hsl(0,0%,25%);
+}
+
+header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+nav button {
+    width: 8rem;
+    height: 2.5rem;
+    color: white;
+    font-weight: 900;
+    background: none;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.active {
+    border-bottom: 0.2rem solid white;
+    padding-bottom: 2.75rem;
+}
+
+nav button:hover {
+    transform: translateY(-0.25rem) scale(1.1);
 }
