@@ -6,7 +6,6 @@ body {
     background-color: black;
     padding: 0;
     margin: 0;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     background-image: url('assets/cat_cafe.jpg');
@@ -53,6 +52,9 @@ nav button {
 
 #content {
     flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer {
@@ -68,3 +70,19 @@ footer {
 nav button:hover {
     transform: translateY(-0.25rem) scale(1.1);
 }
+
+.homepage {
+    height: 85vh;
+    width: 100vw;
+    margin: 3rem 0;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+}
+
+.homepage h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    font-family: 'Caveat', cursive, sans-serif;
+}
+
