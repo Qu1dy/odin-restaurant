@@ -1,5 +1,5 @@
 :root {
-    --secondary-color: hsl(0,0%,10%);
+    --secondary-color: hsla(0,0%,10%, 0.8);
 }
 
 body {
@@ -9,6 +9,8 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url('assets/cat_cafe.jpg');
+    background-size: cover;
 }
 
 body * {
@@ -51,7 +53,6 @@ nav button {
 
 #content {
     flex: 1;
-    
 }
 
 footer {
