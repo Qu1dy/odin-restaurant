@@ -7,8 +7,8 @@ body {
 
 header {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-around;
+    align-items: center;
     background-color: hsl(0,0%,10%);
     height: 5rem;
     box-shadow: 0 0 2rem hsl(0,0%,25%);
@@ -31,18 +31,16 @@ header .logo {
 }
 
 nav button {
-    width: 8rem;
     height: 2.5rem;
     font-weight: 900;
     background: none;
-    font-size: 2rem;
+    font-size: 1.2rem;
     border: none;
     cursor: pointer;
 }
 
 .active {
     border-bottom: 0.2rem solid white;
-    padding-bottom: 2.75rem;
 }
 
 nav button:hover {
