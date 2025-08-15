@@ -14,15 +14,25 @@ header {
     box-shadow: 0 0 2rem hsl(0,0%,25%);
 }
 
+header * {
+    color: white;
+}
+
 header nav {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.6rem;
 }
 
 nav button {
     width: 8rem;
     height: 2.5rem;
-    color: white;
     font-weight: 900;
     background: none;
     font-size: 2rem;

@@ -6,7 +6,7 @@ module.exports = {
     entry: "./src/index.js",
     devtool: "eval-source-map",
     devServer: {
-        watchFiles: ["./src/index.html", "./src/style.css"] 
+        watchFiles: ["./src/index.html", "./src/style.css", "./src/assets"] 
     },
     output: {
         filename: "main.js",
@@ -27,6 +27,10 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: "asset/resource", 
+            },
+            {
+                test: /\.html$/i,
+                use: "html-loader",
             },
 
         ],
