@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     background-image: url('assets/cat_cafe.jpg');
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
 }
 
 body * {
@@ -35,6 +36,8 @@ header .logo {
     align-items: center;
     gap: 1rem;
     font-size: 1.6rem;
+    font-weight: 900;
+    font-family: 'Caveat', cursive, sans-serif;
 }
 
 nav button {
