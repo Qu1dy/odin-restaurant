@@ -1,21 +1,27 @@
+:root {
+    --secondary-color: hsl(0,0%,10%);
+}
+
 body {
     background-color: black;
     padding: 0;
     margin: 0;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body * {
+    color: white;
 }
 
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: hsl(0,0%,10%);
+    background-color: var(--secondary-color);
     height: 5rem;
     box-shadow: 0 0 2rem hsl(0,0%,25%);
-}
-
-header * {
-    color: white;
 }
 
 header nav {
@@ -41,6 +47,20 @@ nav button {
 
 .active {
     border-bottom: 0.2rem solid white;
+}
+
+#content {
+    flex: 1;
+}
+
+footer {
+    height: 4rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
 }
 
 nav button:hover {
