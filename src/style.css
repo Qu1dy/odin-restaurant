@@ -72,10 +72,8 @@ nav button:hover {
 }
 
 .homepage {
-    height: 85vh;
+    height: calc(100vh - 5rem);
     width: 100vw;
-    margin: 3rem 0;
-    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
 }
@@ -84,5 +82,6 @@ nav button:hover {
     font-size: 6rem;
     font-weight: 900;
     font-family: 'Caveat', cursive, sans-serif;
+    color: black;
+    text-shadow: 0 0 4rem black;
 }
-
