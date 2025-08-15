@@ -1,7 +1,6 @@
 import "./style.css";
 import home from './modules/home';
 
-
 const pageController = (() => {
     let content, buttons;
 
@@ -23,6 +22,18 @@ const pageController = (() => {
         return page;
     }
 
+    const _addActiveClass = (button) => {
+        button.classList.toggle("active");
+    }
+
+    const _removeActiveFromButtons = () => {
+        buttons.forEach(button => {
+            if(button.classList.contains('active')) {
+                button.classList.toggle('active');
+            }
+        });
+    }
+
     const _changePage = (page) => {
         content.innerHTML = "";
         content.appendChild(page);
@@ -30,7 +41,12 @@ const pageController = (() => {
 
     const _handleEvents = () => {
         buttons.forEach(button => {
-            button.addEventListener("click", () => _changePage(_getPage(button)));
+            button.addEventListener("click", () => 
+                {
+                    _changePage(_getPage(button));
+                    _removeActiveFromButtons();
+                    _addActiveClass(button);
+                });
         });
     };
 
