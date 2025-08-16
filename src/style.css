@@ -77,14 +77,12 @@ nav button:hover {
     transform: translateY(-0.25rem) scale(1.1);
 }
 
-.homepage, .menupage {
-    height: calc(100vh - 5rem);
-    width: 100vw;
-}
+
 
 .homepage {
     display: flex;
     justify-content: center;
+    height: calc(100vh - 9rem);
 }
 
 .homepage h1 {
@@ -97,6 +95,7 @@ nav button:hover {
 
 .menupage {
     margin: 5rem;
+    height: 150vh;
     background-color: var(--secondary-color);
     box-sizing: border-box;
     display: flex;
@@ -111,6 +110,7 @@ nav button:hover {
 
 .menupage > .category {
     width: 70vw;
+    margin: 1.5rem;
 }
 
 .menupage > .category > h2 {

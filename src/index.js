@@ -15,7 +15,7 @@ const pageController = (() => {
     const init = () => {
         _cacheDom();
         _handleEvents();
-        _changePage(menu);
+        _changePage(home);
     }
 
     const _getPage = (button) => {

@@ -23,9 +23,6 @@ class Category {
         const dd = document.createElement("dd");
         dd.textContent = ` - ${desc}`;
         this.list.append(dt, dd);
-
-        const lineBreak = document.createElement("br");
-        this.node.appendChild(lineBreak);
     }
 }
 
@@ -45,8 +42,15 @@ desserts.addItem("Pawprint Cookies", "shortbread with chocolate paw design");
 desserts.addItem("Catnap Cheesecake", "fluffy cheesecake slice with a curled-cat chocolate garnish");
 desserts.addItem("Meowffin", "blueberry or chocolate chip muffins with ear-shaped toppers");
 
+const bites = new Category("Savory Bites");
+bites.addItem("Tabby Toasties", "grilled cheese or ham & cheese toasties with paw cut-outs");
+bites.addItem("Kitten Quiche", "mini quiches with seasonal veggies");
+bites.addItem("Whisker Wraps", "chicken or veggie wraps tied with nori “whiskers”");
+
+
 menuPage.appendChild(title);
 menuPage.appendChild(drinks.node);
 menuPage.appendChild(desserts.node);
+menuPage.appendChild(bites.node);
 
 export default menuPage;
