@@ -1,10 +1,11 @@
 import "./style.css";
 import home from './modules/home';
+import menu from "./modules/menu";
 
 const pageController = (() => {
     let content, buttons;
 
-    const buttonNameToPage = {"home": home};
+    const buttonNameToPage = {"home": home, "menu": menu};
 
     const _cacheDom = () => {
         content = document.querySelector("#content");
