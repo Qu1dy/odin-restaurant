@@ -75,8 +75,7 @@ nav button:hover {
 }
 
 .homepage, .menupage {
-    min-height: calc(100vh - 5rem);
-    flex: 1;
+    height: calc(100vh - 5rem);
     width: 100vw;
 }
 
@@ -94,39 +93,44 @@ nav button:hover {
 }
 
 .menupage {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     margin: 5rem;
-    box-sizing: border-box;
-    row-gap: 2rem;
-}
-
-.menupage > .card {
-    width: 30rem;
-    height: 10rem;
     background-color: var(--secondary-color);
-    display: grid;
-    grid-template: 2rem 1fr / 8rem 1fr;
-    grid-template-areas:    'image title'
-                            'image description';
-    row-gap: 1.25rem;
-    border-radius: 1rem 2rem 2rem 1rem;
-    border-left: 0.25rem solid #3A8DFF;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.card img {
-    border-radius: 2rem;
-    margin: auto;
-    grid-area: image;
+.menupage > h1 {
+    font-family: 'Caveat', cursive, sans-serif;
+    font-size: 6rem;
+    margin: 0;
 }
 
-.card p {
-    grid-area: description;
-    width: 35ch;
-    color: hsl(0,0%,80%);
+.menupage > .category {
+    width: 60vw;
 }
 
-.card h1 {
-    grid-area: title;
+.menupage > .category > h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+.menupage > .category > * {
+    margin: 0 1rem;
+}
+
+.category > h2 {
+    font-size: 1.5rem;
     font-weight: 900;
+}
+
+.category > p {
+    font-size: 1.2rem;
+}
+
+.menupage > .category > hr {
+    color: #3A8DFF;
+    margin: 1rem 0;
+    width: 50vw;
 }
