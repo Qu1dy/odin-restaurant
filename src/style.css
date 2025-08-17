@@ -103,6 +103,15 @@ button:hover {
     font-weight: 900;
     font-family: 'Caveat', cursive, sans-serif;
     text-shadow: 0 0 1rem black;
+}
+
+.homepage h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 0 1rem var(--blue);
+    line-height: 2;
+}
+
 .homepage button {
     padding: 1rem 4rem;
     background-color: var(--blue);
