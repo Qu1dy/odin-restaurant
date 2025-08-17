@@ -47,10 +47,6 @@ bites.addItem("Tabby Toasties", "grilled cheese or ham & cheese toasties with pa
 bites.addItem("Kitten Quiche", "mini quiches with seasonal veggies");
 bites.addItem("Whisker Wraps", "chicken or veggie wraps tied with nori “whiskers”");
 
-
-menuPage.appendChild(title);
-menuPage.appendChild(drinks.node);
-menuPage.appendChild(desserts.node);
-menuPage.appendChild(bites.node);
+menuPage.append(title, drinks.node, desserts.node, bites.node);
 
 export default menuPage;
