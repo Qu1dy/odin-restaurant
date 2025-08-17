@@ -78,7 +78,7 @@ footer {
     font-size: 1rem;
 }
 
-nav button:hover {
+button:hover {
     transform: translateY(-0.25rem) scale(1.1);
 }
 
@@ -95,6 +95,12 @@ nav button:hover {
     font-weight: 900;
     font-family: 'Caveat', cursive, sans-serif;
     text-shadow: 0 0 1rem black;
+.homepage button {
+    padding: 1rem 4rem;
+    background-color: var(--blue);
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 2rem;
 }
 
 .menupage {
