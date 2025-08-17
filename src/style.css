@@ -1,6 +1,8 @@
 :root {
     --secondary-color: hsla(0,0%,10%, 0.8);
     --blue: #3A8DFF;
+    --fancy-font: 'Caveat', cursive, sans-serif;
+
 }
 
 * {
@@ -41,7 +43,7 @@ header .logo {
     gap: 1rem;
     font-size: 1.6rem;
     font-weight: 900;
-    font-family: 'Caveat', cursive, sans-serif;
+    font-family: var(--fancy-font);
 }
 
 header .logo h1 {
@@ -54,6 +56,9 @@ nav button {
     background: none;
     font-size: 1.2rem;
     border: none;
+}
+
+button {
     cursor: pointer;
 }
 
@@ -78,22 +83,29 @@ footer {
     font-size: 1rem;
 }
 
-button:hover {
+button:not(form button):hover {
     transform: translateY(-0.25rem) scale(1.1);
 }
 
 
 
-.homepage {
+.homepage, .contactpage {
     height: calc(100vh - 15rem);
 }
 
 .menupage, .homepage {
+    flex: 1;
+}
+
+.contactpage {
+    padding: 3rem;
+}
+
+.menupage, .homepage, .contactpage {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 3rem;
-    flex: 1;
     background-color: rgba(0,0,0,0.3);
     border-radius: 2rem;
 }
@@ -101,7 +113,7 @@ button:hover {
 .homepage h1 {
     font-size: 6rem;
     font-weight: 900;
-    font-family: 'Caveat', cursive, sans-serif;
+    font-family: var(--fancy-font);
     text-shadow: 0 0 1rem black;
 }
 
@@ -112,16 +124,16 @@ button:hover {
     line-height: 2;
 }
 
-.homepage button {
-    padding: 1rem 4rem;
+.homepage button, .contactpage button {
     background-color: var(--blue);
     border-radius: 0.5rem;
     border: none;
     font-size: 2rem;
+    padding: 1rem 4rem;
 }
 
 .menupage > h1 {
-    font-family: 'Caveat', cursive, sans-serif;
+    font-family: var(--fancy-font);
     font-size: 6rem;
 }
 
@@ -132,7 +144,7 @@ button:hover {
 
 .menupage > .category > h2 {
     font-size: 4rem;
-    font-family: 'Caveat', cursive, sans-serif;
+    font-family: var(--fancy-font);
     text-align: center;
 }
 
@@ -154,4 +166,35 @@ dl > dd {
     color: var(--blue);
     margin: 2rem 0;
     width: 70vw;
+}
+
+form {
+    display: grid;
+}
+
+form legend {
+    font-size: 5rem;
+    font-family: var(--fancy-font);
+}
+
+form p {
+    font-size: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 1rem;
+}
+
+form input, textarea {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    border-bottom: 4px solid var(--blue); 
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+form p > * {
+    margin: 1rem;
 }
