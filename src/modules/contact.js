@@ -17,7 +17,6 @@ const contactPage = document.createElement("div");
 contactPage.classList.add("contactpage");
 
 const form = document.createElement("form");
-form.setAttribute("action", "POST");
 
 const leg = document.createElement("legend");
 leg.textContent = "Let's keep in touch!";
