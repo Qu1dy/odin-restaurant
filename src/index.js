@@ -3,19 +3,18 @@ import home from './modules/home';
 import menu from "./modules/menu";
 
 const pageController = (() => {
-    let content, buttons;
+    let content = document.querySelector("#content"), buttons;
 
     const buttonNameToPage = {"home": home, "menu": menu};
 
     const _cacheDom = () => {
-        content = document.querySelector("#content");
-        buttons = document.querySelectorAll("header>nav>button");
+        buttons = document.querySelectorAll("button");
     }
 
     const init = () => {
+        _changePage(home);
         _cacheDom();
         _handleEvents();
-        _changePage(home);
     }
 
     const _getPage = (button) => {
