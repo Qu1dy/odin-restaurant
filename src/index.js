@@ -30,7 +30,6 @@ const pageController = (() => {
     const _handleNavButtons = () => {
         buttons.forEach(button => {
             button.addEventListener("click", () => {
-                console.log(button.parentElement);
                 activeButton.classList.toggle("active");
                 activeButton = button;
                 activeButton.classList.toggle("active");

@@ -2,21 +2,18 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    mode: "development",
     entry: "./src/index.js",
-    devtool: "eval-source-map",
-    devServer: {
-        watchFiles: ["./src/index.html", "./src/style.css", "./src/assets"] 
-    },
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, "dist"),
         clean: true,
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: "./src/index.html"
-        }),
+        new HtmlWebpackPlugin(
+            {
+                template: "./src/index.html"
+            }
+        )
     ],
     module: {
         rules: [
@@ -25,14 +22,18 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: "asset/resource", 
+                test: /\.(png|svg|jpeg|jpg|gif)$/i,
+                type: "asset/resource",
             },
             {
-                test: /\.html$/i,
-                use: "html-loader",
+                test: /\.html/i,
+                use: "html-loader"
             },
-
         ],
     },
-}
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    },
+};
