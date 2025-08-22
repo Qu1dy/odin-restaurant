@@ -26,27 +26,31 @@ class Category {
     }
 }
 
-const menuPage = document.createElement("div");
-menuPage.classList.add("menupage");
+const createMenuPage = (() => {
+    const menuPage = document.createElement("div");
+    menuPage.classList.add("menupage");
 
-const title = document.createElement("h1");
-title.textContent = "Our menu";
+    const title = document.createElement("h1");
+    title.textContent = "Our menu";
 
-const drinks  = new Category("Drinks");
-drinks.addItem("Purrfect Latte", "classic latte with cat latte art");
-drinks.addItem("Meowcchiato", "caramel macchiato with a paw-print drizzle");
-drinks.addItem("Catpuccino", "frothy cappuccino topped with cocoa paw dusting");
+    const drinks = new Category("Drinks");
+    drinks.addItem("Purrfect Latte", "classic latte with cat latte art");
+    drinks.addItem("Meowcchiato", "caramel macchiato with a paw-print drizzle");
+    drinks.addItem("Catpuccino", "frothy cappuccino topped with cocoa paw dusting");
 
-const desserts = new Category("Desserts");
-desserts.addItem("Pawprint Cookies", "shortbread with chocolate paw design");
-desserts.addItem("Catnap Cheesecake", "fluffy cheesecake slice with a curled-cat chocolate garnish");
-desserts.addItem("Meowffin", "blueberry or chocolate chip muffins with ear-shaped toppers");
+    const desserts = new Category("Desserts");
+    desserts.addItem("Pawprint Cookies", "shortbread with chocolate paw design");
+    desserts.addItem("Catnap Cheesecake", "fluffy cheesecake slice with a curled-cat chocolate garnish");
+    desserts.addItem("Meowffin", "blueberry or chocolate chip muffins with ear-shaped toppers");
 
-const bites = new Category("Savory Bites");
-bites.addItem("Tabby Toasties", "grilled cheese or ham & cheese toasties with paw cut-outs");
-bites.addItem("Kitten Quiche", "mini quiches with seasonal veggies");
-bites.addItem("Whisker Wraps", "chicken or veggie wraps tied with nori “whiskers”");
+    const bites = new Category("Savory Bites");
+    bites.addItem("Tabby Toasties", "grilled cheese or ham & cheese toasties with paw cut-outs");
+    bites.addItem("Kitten Quiche", "mini quiches with seasonal veggies");
+    bites.addItem("Whisker Wraps", "chicken or veggie wraps tied with nori “whiskers”");
 
-menuPage.append(title, drinks.node, desserts.node, bites.node);
+    menuPage.append(title, drinks.node, desserts.node, bites.node);
+    
+    return menuPage;
+})();
 
-export default menuPage;
+export default createMenuPage;

@@ -13,23 +13,28 @@ const formInput = (name, placeholder, type) => {
     return root;
 }
 
-const contactPage = document.createElement("div");
-contactPage.classList.add("contactpage");
+const createContactPage = (() => {
+    const contactPage = document.createElement("div");
+    contactPage.classList.add("contactpage");
 
-const form = document.createElement("form");
+    const form = document.createElement("form");
 
-const leg = document.createElement("legend");
-leg.textContent = "Let's keep in touch!";
+    const leg = document.createElement("legend");
+    leg.textContent = "Let's keep in touch!";
 
-const name = formInput("Name", "Enter your name", "text");
-const email = formInput("Email", "Enter email address", "email");
-const message = formInput("Message", "Enter your message here", "textarea");
+    const name = formInput("Name", "Enter your name", "text");
+    const email = formInput("Email", "Enter email address", "email");
+    const message = formInput("Message", "Enter your message here", "textarea");
 
-const button = document.createElement("button");
-button.setAttribute("type", "button");
-button.textContent = "Send";
+    const button = document.createElement("button");
+    button.setAttribute("type", "button");
+    button.textContent = "Send";
 
-form.append(leg, name, email, message, button);
+    form.append(leg, name, email, message, button);
 
-contactPage.append(form);
-export default contactPage;
+    contactPage.append(form);
+
+    return contactPage;
+})();
+
+export default createContactPage;
